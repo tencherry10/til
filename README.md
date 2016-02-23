@@ -6,8 +6,8 @@
 
 ### Categories
 
-* [Git](#git)
 * [Docker](#docker)
+* [Git](#git)
 
 ### Docker
 
