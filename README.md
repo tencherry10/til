@@ -9,6 +9,7 @@
 * [Docker](#docker)
 * [Git](#git)
 * [Python](#python)
+* [Verilog](#verilog)
 
 ### Docker
 
@@ -22,3 +23,8 @@
 ### Python
 
 - [PIP Install into local user directory](python/pip-local.md)
+
+### Verilog
+
+- [Using Verilog-Mode to Automatically Tie port inputs to zero and port output to float](veriog/auto-tie-input-output.md)
+
