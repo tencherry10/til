@@ -34,5 +34,4 @@ qemu-arm -L /usr/arm-linux-gnueabihf/ ./main   # or qemu-arm-static
 ```
 
 [source1](https://eewiki.net/display/linuxonarm/BeagleBone+Black#BeagleBoneBlack-ARMCrossCompiler:GCC)
-
 [source2](https://gist.github.com/bdsatish/7476239)
