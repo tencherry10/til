@@ -24,9 +24,9 @@ Oh and this binary will work on x86-64 Linux with qemu-arm.
 You will need to install all the proper cross compiling packages:
 
 ```
-$ sudo apt-get install qemu qemu-user-static binfmt-support 
-$ sudo apt-get install gcc-arm-linux-gnueabihf libc6-dev-armhf-cross  
-$ sudo apt-get install binutils-arm-linux-gnueabi
+sudo apt-get install qemu qemu-user-static binfmt-support 
+sudo apt-get install gcc-arm-linux-gnueabihf libc6-dev-armhf-cross  
+sudo apt-get install binutils-arm-linux-gnueabi
 ```
 
 To run it, you may need to pass the linker path as well:
