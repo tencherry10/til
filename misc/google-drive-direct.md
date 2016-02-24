@@ -12,3 +12,5 @@ https://drive.google.com/drive/folders/<unique id string>
 ```
 http://googledrive.com/host/<unique id string>/<file name>
 ```
+
+[source](http://mycodefixes.blogspot.com/2012/12/google-drive-as-web-host.html)
