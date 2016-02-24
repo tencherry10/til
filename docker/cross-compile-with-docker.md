@@ -13,4 +13,18 @@ There are a number of excellent docker build tools.
 * [multiarch/qemu-user-static](https://hub.docker.com/r/multiarch/qemu-user-static/)
 * [multiarch/crossbuild](https://hub.docker.com/r/multiarch/crossbuild/)
 
+And, if you would like to run armhf binaries in a docker container. Here are some excellent ones to start with:
+
+* [multiarch/busybox](https://hub.docker.com/r/multiarch/busybox/)
+* [multiarch/debian-bootstrap](https://hub.docker.com/r/multiarch/debian-debootstrap/)
+* [multiarch/alpine](https://hub.docker.com/r/multiarch/alpine/)
+* [multiarch/ubuntu-debootstrap](https://hub.docker.com/r/multiarch/ubuntu-debootstrap/)
+
+Just remember that alpine may not have the same "shared libraries"...
+
+To register docker host for transparent qemu user emulation run the following:
+```
 docker run --rm --privileged multiarch/qemu-user-static:register
+```
+
+
