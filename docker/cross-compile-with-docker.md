@@ -27,4 +27,14 @@ To register docker host for transparent qemu user emulation run the following:
 docker run --rm --privileged multiarch/qemu-user-static:register
 ```
 
+You can also transparently cross-compile:
+
+```
+docker run --rm -v $(pwd):/workdir -e CROSS_TRIPLE=arm-linux-gnueabihf multiarch/crossbuild make helloworld
+```
+
+And run it via:
+```docker run -it --rm multiarch/debian-debootstrap:armhf-jessie```
+
+
 
