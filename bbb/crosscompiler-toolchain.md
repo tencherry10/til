@@ -16,10 +16,22 @@ ${CCC}/bin/arm-linux-gnueabihf-gcc --sysroot=${CCC}/arm-linux-gnueabihf/libc/arm
 And like you would expect, the resulting binary format will be arm:
 
 ```
-file main
+$ file main
 main: ELF 32-bit LSB  executable, ARM, EABI5 version 1 (GNU/Linux), statically linked, for GNU/Linux 2.6.32, BuildID[sha1]=56074fabef7e04389c1c1cde7c7ba2d329e5ff3d, not stripped
 ```
 
+Oh and this binary will work on x86-64 Linux with qemu-arm. 
+You will need to install all the proper cross compiling packages:
 
-[source](https://eewiki.net/display/linuxonarm/BeagleBone+Black#BeagleBoneBlack-ARMCrossCompiler:GCC)
+```
+$ sudo apt-get install gcc-arm-linux-gnueabihf libc6-dev-armhf-cross qemu-user-static 
+$ sudo apt-get install binutils-arm-linux-gnueabi
+```
 
+To run it, you may need to pass the linker path as well:
+```
+qemu-arm -L /usr/arm-linux-gnueabihf/ ./main   # or qemu-arm-static
+```
+
+[source1](https://eewiki.net/display/linuxonarm/BeagleBone+Black#BeagleBoneBlack-ARMCrossCompiler:GCC)
+[source2[(https://gist.github.com/bdsatish/7476239)
