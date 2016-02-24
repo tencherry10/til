@@ -13,5 +13,13 @@ export CCC=./gcc-linaro-5.2-2015.11-x86_64_arm-linux-gnueabihf
 ${CCC}/bin/arm-linux-gnueabihf-gcc --sysroot=${CCC}/arm-linux-gnueabihf/libc/arm-linux-gnueabihf/ -static main.c -o main
 ```
 
+And like you would expect, the resulting binary format will be arm:
+
+```
+file main
+main: ELF 32-bit LSB  executable, ARM, EABI5 version 1 (GNU/Linux), statically linked, for GNU/Linux 2.6.32, BuildID[sha1]=56074fabef7e04389c1c1cde7c7ba2d329e5ff3d, not stripped
+```
+
+
 [source](https://eewiki.net/display/linuxonarm/BeagleBone+Black#BeagleBoneBlack-ARMCrossCompiler:GCC)
 
