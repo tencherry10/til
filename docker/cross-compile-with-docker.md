@@ -35,7 +35,9 @@ docker run --rm -v $(pwd):/workdir -e CROSS_TRIPLE=arm-linux-gnueabihf multiarch
 
 And run it via:
 
-```docker run -it --rm multiarch/debian-debootstrap:armhf-jessie```
+```
+docker run -it --rm multiarch/debian-debootstrap:armhf-jessie
+```
 
 
 
