@@ -11,6 +11,7 @@
 * [Git](#git)
 * [Python](#python)
 * [Verilog](#verilog)
+* [Misc](#misc)
 
 ### BBB
 
@@ -25,6 +26,10 @@
 
 - [Caching Credentials](git/caching-credentials.md)
 - [Disable Password Popup](git/disable-password-popup.md)
+
+### Misc
+
+- [Accessing Google Drive File Directly](misc/google-drive-direct.md)
 
 ### Python
 
