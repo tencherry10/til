@@ -9,9 +9,11 @@
 * [Beagle Bone Black](#bbb)
 * [Docker](#docker)
 * [Git](#git)
+* [Lua](#lua)
+* [Misc](#misc) 
 * [Python](#python)
 * [Verilog](#verilog)
-* [Misc](#misc)
+
 
 ### BBB
 
@@ -26,6 +28,10 @@
 
 - [Caching Credentials](git/caching-credentials.md)
 - [Disable Password Popup](git/disable-password-popup.md)
+
+### Lua
+
+- [Useful Lua Package](lua/useful-packages.md)
 
 ### Misc
 
