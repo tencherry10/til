@@ -12,8 +12,8 @@
 * [Lua](#lua)
 * [Misc](#misc) 
 * [Python](#python)
+* [SVN](#svn)
 * [Verilog](#verilog)
-
 
 ### BBB
 
@@ -40,6 +40,10 @@
 ### Python
 
 - [PIP Install into local user directory](python/pip-local.md)
+
+### SVN
+
+- [Delete all .svn directory](svn/clear-dot-svn.md)
 
 ### Verilog
 
