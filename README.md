@@ -23,6 +23,7 @@
 
 - [bash / ssh into background docker](docker/attach-to-bg-docker.md)
 - [docker cross compile env](docker/cross-compile-with-docker.md)
+- [cleanup exited / dangling docker container](docker/cleanup-old-container.md)
 
 ### Git
 
