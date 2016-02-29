@@ -48,10 +48,10 @@ CON
   // use out safely here
   ```
     
-#### Use special sentinel values. Lots of C library functions work this way. For e.g. getc() which return EOF when there is an error. Zero can be a sentinel for ptr returns. Negative values could be used as a sentinel for unsigned value output.
+#### Use special sentinel values
 
 PRO
-
+  1. Some returns have natural sentinel values. Zero can be a sentinel for ptr returns. Negative values could be used as a sentinel for unsigned value output (like lengths).
   1. Minimal number of arguments but possibly harder to use
   
   ```c
@@ -67,7 +67,7 @@ PRO
   }
   ```
   
-  1. Lots of C library function is like this.
+  1. Lots of C library function is like this, so C programmers are familiar. For e.g. fgetc().
   
 CON
 
