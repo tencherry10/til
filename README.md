@@ -7,6 +7,7 @@
 ### Categories
 
 * [Beagle Bone Black](#bbb)
+* [C/C++](#c-cpp)
 * [Docker](#docker)
 * [Git](#git)
 * [Lua](#lua)
@@ -19,6 +20,9 @@
 
 - [cross compiling arm toolchain](bbb/crosscompiler-toolchain.md)
 - [useful resources](bbb/useful-resources.md)
+
+# C / C++
+
 
 ### Docker
 
