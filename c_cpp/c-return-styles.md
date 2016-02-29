@@ -1,6 +1,7 @@
 ## Overview of C error handling / return style
 
-1. Return function output via a reference parameter and return status normally through the stack
+
+#### Return function output via a reference parameter and return status normally through the stack
 
   ```c
   int foo(int * out, int in1, int in2);
@@ -23,7 +24,7 @@
     1. Can be annoying if the user of code knows it is not possible to fail
     1. If you have to handle different errors differently (with multiple if cases), it may still be ugly
 
-1. Return output via stack and the error code via a reference argument
+#### Return output via stack and the error code via a reference argument
 
   ```c
   int foo(int * ok, int in1, int in2);
@@ -47,7 +48,7 @@
     // use out safely here
     ```
     
-1. Use special sentinel values. Lots of C library functions work this way. For e.g. getc() which return EOF when there is an error. Zero can be a sentinel for ptr returns. Negative values could be used as a sentinel for unsigned value output.
+#### Use special sentinel values. Lots of C library functions work this way. For e.g. getc() which return EOF when there is an error. Zero can be a sentinel for ptr returns. Negative values could be used as a sentinel for unsigned value output.
 
   PRO
   
@@ -74,8 +75,7 @@
     1. Even if you have a sentinel value, you may not be able to express all the error condition. 
       If you need to differentiate between different error conditions. Then you still have to do some version of above or use an out of channel error system like errno.
       
-
-1. Use an out-of-band error reporting system (like errno).
+#### Use an out-of-band error reporting system (like errno).
 
   PRO
   
