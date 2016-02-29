@@ -6,6 +6,7 @@
 1. [Special Sentinel Values](#use-special-sentinel-values)
 1. [Out-of-band error system](#out-of-band-error-reporting-system)
 1. [Return struct with error info](#return-struct)
+1. [Macro based try-except](#macro-based-try-except)
 
 ---
 
@@ -165,4 +166,15 @@ int main(void) {
 }
 ```
 
+PRO
+
+  1. Familiar try-except to most other "higher level" programming language and possibly easier to read
+  1. Error handling code nicely separated (and not interleaved) from regular code
+
+CON
+
+  1. Error handling is far away from code that produce the error. Although this is a problem for all exception based error handling.
+  1. Nasty Macros (although this is actually how exception works underneath in most other languages)
+  1. Doesn't work if function within try block throws error. Although this isn't hard to fix if you are willing to introduce global state.
+  1. setjmp / longjmp is expensive
 
