@@ -1,7 +1,10 @@
 ## Overview of C error handling / return style
 
+1. 
 
-#### Return function output via a reference parameter and return status normally through the stack
+---
+
+#### Return output via a reference parameter
 
 ```c
 int foo(int * out, int in1, int in2);
@@ -24,7 +27,7 @@ CON
   1. Can be annoying if the user of code knows it is not possible to fail
   1. If you have to handle different errors differently (with multiple if cases), it may still be ugly
 
-#### Return output via stack and the error code via a reference argument
+#### Return error code via a reference argument
 
 ```c
 int foo(int * ok, int in1, int in2);
@@ -75,7 +78,7 @@ CON
   1. Even if you have a sentinel value, you may not be able to express all the error condition. 
     If you need to differentiate between different error conditions. Then you still have to do some version of above or use an out of channel error system like errno.
     
-#### Use an out-of-band error reporting system (like errno).
+#### Out-of-band error reporting system
 
 PRO
 
@@ -93,6 +96,8 @@ PRO
   }
   // use ul here
   ```
+  
+  1. Also common among C / Linux standard library. It is called errno in the standard library.
   
 CON
 
