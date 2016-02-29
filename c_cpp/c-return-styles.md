@@ -1,14 +1,11 @@
 
-
-
-
-
 ## Overview of C error handling / return style
 
 1. [Output via reference argument](#return-output-via-a-reference-argument)
 1. [Error via reference argument](#return-error-via-a-reference-argument)
 1. [Special Sentinel Values](#use-special-sentinel-values)
 1. [Out-of-band error system](#out-of-band-error-reporting-system)
+1. [Return struct with error info](#return-struct)
 
 ---
 
@@ -80,8 +77,6 @@ if( (c == fgetc(fp)) == EOF) {
 }
 ```
 
-
-
 CON
 
 1. Not always possibly to have a sentinel value
@@ -92,7 +87,8 @@ CON
 
 PRO
 
-1. Function Call looks simpler
+1. Common among C / Linux standard library. (look up errno)
+1. Function call looks simpler
 
 ```c
 unsigned long ul; 
@@ -107,16 +103,39 @@ if( (ul = strtoul (buffer, NULL, 0)) == 0) {
 // use ul here
 ```
 
-1. Also common among C / Linux standard library. It is called errno in the standard library.
-
 CON
 
 1. out-of-band error reporting will have global state. So, it will be problematic for multi-threaded programs.
 1. problematic for library functions b/c you may have nested calls which wants to report error via errno
 
-#### Error struct
+#### Return struct
 
 PRO
+
+1. No global state
+1. Easy to add additional error information (like a string to explain error, or even a stack trace!)
+1. Unambiguous intent
+
+```c
+typedef struct {
+  int ret;
+  int err;
+} int_ret_t;
+
+int_ret_t foo(int in1, int in2);
+
+int_ret_t r;
+if( (r = foo(1,2)).err != SUCCESS) {
+  // handle err
+}
+// use r.ret here
+```
+
+CON
+
+1. Extremely heavy-weight (possibly lots of structs or have to use void * and memory)
+
+
 
 
 
