@@ -51,7 +51,7 @@
 
   PRO
   
-    1. Minimal number of arguments
+    1. Minimal number of arguments but possibly harder to use
     
     ```c
     int c;
@@ -75,9 +75,31 @@
       If you need to differentiate between different error conditions. Then you still have to do some version of above or use an out of channel error system like errno.
       
 
+1. Use an out-of-band error reporting system (like errno).
+
+  PRO
+  
+    1. Function Call looks simpler
     
+    ```c
+    unsigned long ul; 
+    errno = 0;
+    if( (ul = strtoul (buffer, NULL, 0)) == 0) {
+      if(errno != 0) {
+        // handle error
+        
+      }
+      // else it is actually 0
+    }
+    // use ul here
+    ```
     
+  CON
+  
+    1. out-of-band error reporting will have global state. So, it will be problematic for multi-threaded programs.
+    1. problematic for library functions b/c you may have nested calls which wants to report error via errno
     
+
     
 
    
