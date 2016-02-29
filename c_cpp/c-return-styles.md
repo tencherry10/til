@@ -47,7 +47,20 @@
     // use out safely here
     ```
     
-1. Use special sentinel values. Lots of C library functions work this way. For e.g. getc() which return EOF when there is an error
+1. Use special sentinel values. Lots of C library functions work this way. For e.g. getc() which return EOF when there is an error. Zero can be a sentinel for ptr returns. Negative values could be used as a sentinel for unsigned value output.
+
+  PRO
+  
+    1. Lots of C library function is like this.
+    
+  CON
+  
+    1. Not always possibly to have a sentinel value
+    1. Even if you have a sentinel value, you may not be able to express all the error condition.
+    
+    
+    
+    
 
    
 
