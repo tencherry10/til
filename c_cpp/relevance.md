@@ -1,7 +1,7 @@
 ## Why C is still Relevant
 
 
-### Truly a System Language from the inside-out
+#### Truly a System Language from the inside-out
 
 * Only language that is supported via a FFI from all other programming language
 * Only language that is supported **first** for on moderm processors. In fact most modern processors have customer pointer and add instructions that are designed to accelerated C generated code.
