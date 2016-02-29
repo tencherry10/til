@@ -56,7 +56,10 @@
   CON
   
     1. Not always possibly to have a sentinel value
-    1. Even if you have a sentinel value, you may not be able to express all the error condition.
+    1. Even if you have a sentinel value, you may not be able to express all the error condition. 
+      If you need to differentiate between different error conditions. Then you still have to do some version of above or use an out of channel error system like errno.
+      
+
     
     
     
