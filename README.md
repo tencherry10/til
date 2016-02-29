@@ -18,6 +18,7 @@
 ### BBB
 
 - [cross compiling arm toolchain](bbb/crosscompiler-toolchain.md)
+- [useful resources](bbb/useful-resources.md)
 
 ### Docker
 
