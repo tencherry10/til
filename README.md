@@ -21,9 +21,9 @@
 - [cross compiling arm toolchain](bbb/crosscompiler-toolchain.md)
 - [useful resources](bbb/useful-resources.md)
 
-# C / CPP
+### C / CPP
 
-
+- [C Data Structures](c_cpp/data_structures.md)
 
 ### Docker
 
