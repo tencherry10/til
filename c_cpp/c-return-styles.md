@@ -135,7 +135,34 @@ CON
 
 1. Extremely heavy-weight (possibly lots of structs or have to use void * and memory)
 
+#### Macro-based try-except
 
+Abuse setjmp/longjmp Here is a simplified explanation. C Interface and Implementation book has a more sophisticated (but more complicated) version.
 
+```c
+#include <stdio.h>
+#include <setjmp.h>
+
+#define TRY do{ jmp_buf ex_buf__; int err = 0; if( (err = setjmp(ex_buf__)) == 0){
+#define CATCH } else {
+#define ETRY } }while(0)
+#define THROW(x) longjmp(ex_buf__, x)
+
+int main(void) {
+  TRY {
+    printf("In Try Statement\n");
+    THROW(1);
+    printf("I do not appear\n");
+  } CATCH {
+    switch(err) {
+    case  1: printf("Got Exception 1!\n"); break;
+    case  2: printf("Got Exception 2!\n"); break;
+    default: printf("Got unknown Exception!\n"); break;
+    }
+  }
+  ETRY;
+  return 0;
+}
+```
 
 
