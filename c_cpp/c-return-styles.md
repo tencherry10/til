@@ -4,7 +4,7 @@
 
 ---
 
-#### Return output via a reference parameter
+#### Return output via a reference argument
 
 ```c
 int foo(int * out, int in1, int in2);
@@ -27,7 +27,7 @@ CON
   1. Can be annoying if the user of code knows it is not possible to fail
   1. If you have to handle different errors differently (with multiple if cases), it may still be ugly
 
-#### Return error code via a reference argument
+#### Return error via a reference argument
 
 ```c
 int foo(int * ok, int in1, int in2);
