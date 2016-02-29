@@ -51,6 +51,21 @@
 
   PRO
   
+    1. Minimal number of arguments
+    
+    ```c
+    int c;
+    FILE * fp = fopen("file.txt", "r");
+    if( (c == fgetc(fp)) == EOF) {
+      // could be EOF or could be error (must check)
+      if( ferror(fp) ) {
+        // handle error
+      } else {
+        // got EOF ==> wrap up 
+      }
+    }
+    ```
+    
     1. Lots of C library function is like this.
     
   CON
