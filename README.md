@@ -27,7 +27,6 @@
 - [cleanup exited / dangling docker container](docker/cleanup-old-container.md)
 - [accessing host port from docker container](docker/container-host-port-access.md)
 
-
 ### Git
 
 - [Caching Credentials](git/caching-credentials.md)
@@ -36,6 +35,7 @@
 ### Lua
 
 - [Useful Lua Package](lua/useful-packages.md)
+- [Terra (low-level counterpart)](lua/terra.md)
 
 ### Misc
 
