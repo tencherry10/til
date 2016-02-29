@@ -1,6 +1,9 @@
 ## Overview of C error handling / return style
 
-1. 
+1. [Output via reference argument](#return-output-via-a-reference-argument)
+1. [Error via reference argument](#return-error-via-a-reference-argument)
+1. [Special Sentinel Values](#use-special-sentinel-values)
+1. [Out-of-band error system](#out-of-band-error-reporting-system)
 
 ---
 
