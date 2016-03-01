@@ -13,6 +13,7 @@
 * [Lua](#lua)
 * [Misc](#misc) 
 * [Python](#python)
+* [SBC](#sbc)
 * [SVN](#svn)
 * [Verilog](#verilog)
 
@@ -51,6 +52,8 @@
 ### Python
 
 - [PIP Install into local user directory](python/pip-local.md)
+
+### SBC
 
 ### SVN
 
