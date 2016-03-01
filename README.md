@@ -62,5 +62,5 @@
 ### Verilog
 
 - [Verilog Mode Tips & Tricks](veriog/verilog-mode-tips.md)
-- [Using Verilog-Mode to Automatically Tie port inputs to zero and port output to float](veriog/auto-tie-input-output.md)
+- [Using Verilog-Mode to Automatically Tie port inputs to zero and port output to float](verilog/auto-tie-input-output.md)
 
