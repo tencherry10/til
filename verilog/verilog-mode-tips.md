@@ -2,7 +2,7 @@
 
 
 1. Auto tie input to zero / output to float(#auto-tie-input-to-zero--output-to-float)
-1. Removing outputs from AUTOOUTPUT
+1. Removing outputs from AUTOOUTPUT(##removing-outputs-from-autooutput)
 
 #### Auto tie input to zero / output to float
 
