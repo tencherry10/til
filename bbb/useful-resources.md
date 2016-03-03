@@ -1,6 +1,5 @@
 ### Useful Resources for BBB
 
-
 Straight from TI
 
 * [Datasheet](http://www.ti.com/lit/ds/symlink/am3358.pdf)
