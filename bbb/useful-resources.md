@@ -10,3 +10,7 @@ BBB Variants
 
 * [uSomIQ BBB](http://www.mentorel.com/product/usomiq-bbb/) - BBB in System-on-Module format
 
+Useful Web Articles
+
+* [BBB Debian RO Filesystem](http://armsdr.blogspot.com/2014/11/beaglebone-debian-read-only-filesystem.html)
+
