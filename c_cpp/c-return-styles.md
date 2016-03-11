@@ -7,6 +7,7 @@
 1. [Out-of-band error system](#out-of-band-error-reporting-system)
 1. [Return struct with error info](#return-struct)
 1. [Macro based try-except](#macro-based-try-except)
+1. [Error string based](#error-string-based)
 
 ---
 
@@ -135,6 +136,7 @@ if( (r = foo(1,2)).err != SUCCESS) {
 CON
 
 1. Extremely heavy-weight (possibly lots of structs or have to use void * and memory)
+1. Requires using to include header file about struct
 
 #### Macro-based try-except
 
@@ -177,4 +179,30 @@ CON
   1. Nasty Macros (although this is actually how exception works underneath in most other languages)
   1. Doesn't work if function within try block throws error. Although this isn't hard to fix if you are willing to introduce global state.
   1. setjmp / longjmp is expensive
+
+#### Error string based
+
+Based on the same ideas as [Return output via a reference argument](#return-output-via-a-reference-argument). But, we return the error code as string instead, so it is self describing. The string should preferably be const char * so that it hopefully doesn't require mmalloc.
+
+```c
+const char* foo(int *ret, int in1, int in2) {
+  if(err) {
+    return "OOM";
+  }
+}
+
+const char* bar(int *v, int x, int y) {
+  int val;
+  const char* ret = NULL;
+  if( (ret = foo(&val, x, y)) == NULL)
+    goto cleanup;
+  
+  // use val here
+  
+cleanup:
+  // resource free here
+  return ret;
+}
+
+```
 
