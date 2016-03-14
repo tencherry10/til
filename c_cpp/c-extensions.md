@@ -1,7 +1,7 @@
 ### C Extensions
 
-1. auto cleanup on scope exit: ```__attribute__((cleanup(cleanup_f)))```
-
+1. GCC / CLANG. auto cleanup on scope exit. 
+  
   ```c
   
   #define auto_free_cstr __attribute__((cleanup(f_cleanup_cstr)))
@@ -18,7 +18,7 @@
   
   ```
 
-1. labels as values
+1. GCC / CLANG / ICC. labels as values / indirect goto
 
   ```c
   int main(){
