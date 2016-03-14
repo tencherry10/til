@@ -59,3 +59,8 @@
   }
   ```
 
+1. GCC / CLANG. ```__builtin_prefetch``` optimization flag
+  ```c
+  __builtin_prefetch(&data[offset], 1); /* 0 - read only, 1 - rw */
+  ```
+  
