@@ -63,4 +63,18 @@
   ```c
   __builtin_prefetch(&data[offset], 1); /* 0 - read only, 1 - rw */
   ```
-  
+
+1. GCC / CLANG?. ```__attribute__((weak))``` linker level dynamic overriding
+
+  ```main.c``` : 
+  ```c
+  void __attribute__((weak)) f();
+  int main(void) {
+    if (f)
+      f();
+    return 0;
+  }
+  ```
+
+
+
