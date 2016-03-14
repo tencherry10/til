@@ -15,7 +15,7 @@
   }
   ```
 
-1. GCC / CLANG / ICC. labels as values / indirect goto
+1. GCC / CLANG / ICC. labels as values / indirect goto. This can be used as dispatch tables.
   ```c
   int main(){
     int value  = 2;
