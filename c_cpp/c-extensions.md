@@ -66,7 +66,8 @@
 
 1. GCC / CLANG?. ```__attribute__((weak))``` linker level dynamic overriding
 
-  ```main.c``` : 
+  ```main.c``` :
+  
   ```c
   void __attribute__((weak)) f();
   int main(void) {
@@ -76,5 +77,12 @@
   }
   ```
 
+  ```lib_f.c```:
+  
+  ```c
+  void __attribute__((weak)) f() {
+    printf("lib f..\n");
+  }
+  ```
 
 
