@@ -27,6 +27,7 @@
 - [Why C is still relevant](c_cpp/relevance.md)
 - [C Error Return Styles](c_cpp/c-return-styles.md)
 - [C Data Structures](c_cpp/data_structures.md)
+- [C Extensions](c_cpp/c-extensions.md)
 
 ### Docker
 
