@@ -77,12 +77,17 @@
   }
   ```
 
-  ```lib_f.c```:
-  
+
+  ```lib_f.c``` :
   ```c
   void __attribute__((weak)) f() {
     printf("lib f..\n");
   }
   ```
-
-
+  
+  ```ovrd_f.c``` :
+  ```c
+  void f() {
+    printf("overridden f!\n");
+  }
+  ```
