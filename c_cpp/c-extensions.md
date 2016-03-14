@@ -100,4 +100,5 @@
   
   ```gcc main.c lib_f.c ovrd_f.c -o main && ./main``` : ```overridden f!```
   
-  
+  Note, you can have only one strong reference, but you can have multiple weak reference. 
+  In the case with multiple-weak reference and no strong reference a random weak function will be chosen.
