@@ -35,7 +35,7 @@
   }
   ```
 
-1. GCC / CLANG?. statement expression
+1. GCC / CLANG. statement expression
   ```c
   #define MAX(a,b)                    \
       ({                              \
@@ -46,3 +46,16 @@
   int b=56;
   int c= ({int a; a=sin(b); a});
   ```
+
+1. GCC / CLANG. ```__builtin_expect``` optimization flag
+  ```c
+  #define likely(x)     __builtin_expect(!!(x), 1)
+  #define unlikely(x)   __builtin_expect(!!(x), 0)
+  
+  int foo(int i){
+    if(likely(i == 0))
+        return 1;
+    return 2;
+  }
+  ```
+
