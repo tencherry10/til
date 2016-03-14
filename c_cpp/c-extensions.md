@@ -93,7 +93,11 @@
   ```
   
   ```gcc main.c -o main && ./main``` : ```(nothing but no linker error)```
+  
   ```gcc main.c lib_f.c -o main && ./main``` : ```lib f..```
+  
   ```gcc main.c ovrd_f.c -o main && ./main``` : ```overridden f!```
+  
   ```gcc main.c lib_f.c ovrd_f.c -o main && ./main``` : ```overridden f!```
+  
   
