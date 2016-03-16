@@ -41,7 +41,8 @@ Let's give a couple examples
     1. process exited with error code
   1. Explicit+Non-Fatal
     1. Logs error and give up and move on
-    2. Drops packet (and hopes upstream retry)
+    1. Drops packet (and hopes upstream retry)
+    1. corrupt data
   1. Implicit+Fatal
     1. SEG FAULTS - (memory error but we have no idea why)
     1. Uncaught exception - (which exception caused it and where???)
@@ -49,7 +50,13 @@ Let's give a couple examples
     1. Programs survives but badly - everything is slow / grinds to a halt 
       (maybe thread-locked or waiting for a some back-pressured queue)
     1. Program cheerfully gives the wrong answer without awareness of error
+    1. memory leaks / resource leaks
 
+In the cases above, Hopefully it is obvious that Explicit + Fatal is most useful. We know where and why and we can proceed to triage the problem by looking at the core dump. 
 
-  
+Between Explicit+Non-Fatal and Implicit+Fatal, it is debatable which one is better or worse. Implicit+Fatal prevents the mistake from continuing (although it is painful to debug valgrind / gdb anyone?). Explicit+Non-Fatal gives you a bit more error info, but by the time you realized it, the program may have trashed your database.
+
+Implicit+Non-Fatal is the worse of all, you may not even be aware of the error.
+
+The solution? Handle every exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
 
