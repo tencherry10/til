@@ -56,7 +56,7 @@ In the cases above, Hopefully it is obvious that Explicit + Fatal is most useful
 
 Between Explicit+Non-Fatal and Implicit+Fatal, it is debatable which one is better or worse. Implicit+Fatal prevents the mistake from continuing (although it is painful to debug valgrind / gdb anyone?). Explicit+Non-Fatal gives you a bit more error info, but by the time you realized it, the program may have trashed your database.
 
-Implicit+Non-Fatal is the worse of all, you may not even be aware of the error.
+Implicit+Non-Fatal is the worse of all, you may not even be aware of the error. Usually, the errors accumulate until it (or one of its downstream process) becomes Implicit+Fatal / Explicit+Fatal.
 
 The solution? Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
 
