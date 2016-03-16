@@ -28,29 +28,29 @@ First off, a distinction need to be made between **errors** and **exception**:
   
 
 So, a couple quick observations fall out from this:
-  1. There are a lot more exceptions and exceptions are generally more meaningful than errors.
-  1. Most people and languages confuse exceptions with errors (or more correctly programming mistakes). 
+1. There are a lot more exceptions and exceptions are generally more meaningful than errors.
+1. Most people and languages confuse exceptions with errors (or more correctly programming mistakes). 
 
 As a rule of thumb, a programming mistake could be categorized on two axis:
-  1. Implicit/Explicit - whether the programmer is aware of the mistake
-  1. Fatal/Non-fatal - whether the mistake was allowed to propagate or whether the program terminates itself
+1. Implicit/Explicit - whether the programmer is aware of the mistake
+1. Fatal/Non-fatal - whether the mistake was allowed to propagate or whether the program terminates itself
 
 Let's give a couple examples
-  1. Explicit+Fatal - 
-    1. An assertion failed
-    1. process exited with error code
-  1. Explicit+Non-Fatal
-    1. Logs error and give up and move on
-    1. Drops packet (and hopes upstream retry)
-    1. corrupt data
-  1. Implicit+Fatal
-    1. SEG FAULTS - (memory error but we have no idea why)
-    1. Uncaught exception - (which exception caused it and where???)
-  1. Implicit+Non-Fatal
-    1. Programs survives but badly - everything is slow / grinds to a halt 
-      (maybe thread-locked or waiting for a some back-pressured queue)
-    1. Program cheerfully gives the wrong answer without awareness of error
-    1. memory leaks / resource leaks
+1. Explicit+Fatal - 
+  1. An assertion failed
+  1. process exited with error code
+1. Explicit+Non-Fatal
+  1. Logs error and give up and move on
+  1. Drops packet (and hopes upstream retry)
+  1. corrupt data
+1. Implicit+Fatal
+  1. SEG FAULTS - (memory error but we have no idea why)
+  1. Uncaught exception - (which exception caused it and where???)
+1. Implicit+Non-Fatal
+  1. Programs survives but badly - everything is slow / grinds to a halt 
+    (maybe thread-locked or waiting for a some back-pressured queue)
+  1. Program cheerfully gives the wrong answer without awareness of error
+  1. memory leaks / resource leaks
 
 In the cases above, Hopefully it is obvious that Explicit + Fatal is most useful. We know where and why and we can proceed to triage the problem by looking at the core dump. 
 
@@ -58,5 +58,7 @@ Between Explicit+Non-Fatal and Implicit+Fatal, it is debatable which one is bett
 
 Implicit+Non-Fatal is the worse of all, you may not even be aware of the error. Usually, the errors accumulate until it (or one of its downstream process) becomes Implicit+Fatal / Explicit+Fatal.
 
-The solution? Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
+The solution? 
+1. Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
+1. Guard your functions. Before execution assert all invariants. Crash if any of them is obviously a programmer mistake.
 
