@@ -28,14 +28,17 @@ First off, a distinction need to be made between **errors** and **exception**:
   
 
 So, a couple quick observations fall out from this:
+
 1. There are a lot more exceptions and exceptions are generally more meaningful than errors.
 1. Most people and languages confuse exceptions with errors (or more correctly programming mistakes). 
 
 As a rule of thumb, a programming mistake could be categorized on two axis:
+
 1. Implicit/Explicit - whether the programmer is aware of the mistake
 1. Fatal/Non-fatal - whether the mistake was allowed to propagate or whether the program terminates itself
 
 Let's give a couple examples
+
 1. Explicit+Fatal - 
   1. An assertion failed
   1. process exited with error code
