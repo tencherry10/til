@@ -58,5 +58,5 @@ Between Explicit+Non-Fatal and Implicit+Fatal, it is debatable which one is bett
 
 Implicit+Non-Fatal is the worse of all, you may not even be aware of the error.
 
-The solution? Handle every exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
+The solution? Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
 
