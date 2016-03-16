@@ -58,7 +58,8 @@ Between Explicit+Non-Fatal and Implicit+Fatal, it is debatable which one is bett
 
 Implicit+Non-Fatal is the worse of all, you may not even be aware of the error. Usually, the errors accumulate until it (or one of its downstream process) becomes Implicit+Fatal / Explicit+Fatal.
 
-The solution? 
+The solution?
+
 1. Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
 1. Guard your functions. Before execution assert all invariants. Crash if any of them is obviously a programmer mistake.
 
