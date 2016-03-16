@@ -15,6 +15,7 @@
 * [Python](#python)
 * [SBC](#sbc)
 * [SVN](#svn)
+* [Thoughts](#thoughts)
 * [Verilog](#verilog)
 
 ### BBB
@@ -59,6 +60,10 @@
 ### SVN
 
 - [Delete all .svn directory](svn/clear-dot-svn.md)
+
+### Thoughts
+
+- [On Error Handling](thoughts/on-error-handling.md)
 
 ### Verilog
 
