@@ -27,3 +27,29 @@ First off, a distinction need to be made between **errors** and **exception**:
   1. Most input / output / file errors are actually exceptions - If you attempt to open a file that does not exist, it is an IO exception. The program can certainly recover from it. Confusingly enough, python calls this "exception" IOError...
   
 
+So, a couple quick observations fall out from this:
+  1. There are a lot more exceptions and exceptions are generally more meaningful than errors.
+  1. Most people and languages confuse exceptions with errors (or more correctly programming mistakes). 
+
+As a rule of thumb, a programming mistake could be categorized on two axis:
+  1. Implicit/Explicit - whether the programmer is aware of the mistake
+  1. Fatal/Non-fatal - whether the mistake was allowed to propagate or whether the program terminates itself
+
+Let's give a couple examples
+  1. Explicit+Fatal - 
+    1. An assertion failed
+    1. process exited with error code
+  1. Explicit+Non-Fatal
+    1. Logs error and give up and move on
+    2. Drops packet (and hopes upstream retry)
+  1. Implicit+Fatal
+    1. SEG FAULTS - (memory error but we have no idea why)
+    1. Uncaught exception - (which exception caused it and where???)
+  1. Implicit+Non-Fatal
+    1. Programs survives but badly - everything is slow / grinds to a halt 
+      (maybe thread-locked or waiting for a some back-pressured queue)
+    1. Program cheerfully gives the wrong answer without awareness of error
+
+
+  
+
