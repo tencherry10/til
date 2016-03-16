@@ -32,6 +32,11 @@ So, a couple quick observations fall out from this:
 1. There are a lot more exceptions and exceptions are generally more meaningful than errors.
 1. Most people and languages confuse exceptions with errors (or more correctly programming mistakes). 
 
+What may not be obvious is that:
+
+1. Unhandled Exception only fail after traversing multiple layers up on the stack. It may even cross the boundary of a program and propagate via RPC callbacks / queues / promises far away from the original point where the failure was detected.
+1. Unhandled Exception may be masked, errors may be catch in layer in between and retransmitted as other exceptions or even squelched.
+
 As a rule of thumb, a programming mistake could be categorized on two axis:
 
 1. Implicit/Explicit - whether the programmer is aware of the mistake
@@ -63,6 +68,8 @@ Implicit+Non-Fatal is the worse of all, you may not even be aware of the error. 
 
 The solution?
 
-1. Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function).
+1. Handle **EVERY** exception. If it is handle-able, do it. If it is an obvious error, abort the program. Don't propagrate the error (unless you are library function, see aside below).
 1. Guard your functions. Before execution assert all invariants. Crash if any of them is obviously a programmer mistake.
+
+Aside. The only time where abort soon and abort fast is not an appropriate solution is in a library / framework, where we must allow our client the power to choose how to handle the exception. Although, I honestly think the default should still be abort on most exception and then the customer may choose to de-escalate the exception from a simple abort to error reporting.
 
