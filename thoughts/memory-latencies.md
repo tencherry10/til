@@ -11,3 +11,5 @@ Notes
 
 - Need a section on TLB
 - Page Fault Handler?
+- Memory Zones?
+ 
