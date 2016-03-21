@@ -46,6 +46,7 @@
 
 - [Caching Credentials](git/caching-credentials.md)
 - [Disable Password Popup](git/disable-password-popup.md)
+- [Merging Upstreaming Repo into a fork](git/merging-upstream-repo.md)
 
 ### Lua
 
