@@ -72,6 +72,7 @@
 
 - [On Error Handling](thoughts/on-error-handling.md)
 - [Memory and Latencies](thoughts/memory-latencies.md)
+- [Parallel Computing](thoughts/parallel-computing.md)
 
 ### Tools
 
