@@ -17,6 +17,7 @@
 * [SBC](#sbc)
 * [SVN](#svn)
 * [Thoughts](#thoughts)
+* [Useful Tools](#tools)
 * [Verilog](#verilog)
 
 ### BBB
@@ -71,6 +72,10 @@
 
 - [On Error Handling](thoughts/on-error-handling.md)
 - [Memory and Latencies](thoughts/memory-latencies.md)
+
+### Tools
+
+- [Scraping](tools/scraping.md)
 
 ### Verilog
 
