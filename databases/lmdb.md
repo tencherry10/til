@@ -11,7 +11,6 @@ Couple key features
 1. readers don't allocate memory (mmap'd directly so zero-copy)
 1. only 1 writers allowed
 1. no compaction / garbage collection ==> relatively deterministic latency (no spikes)
-1. 
 
 Useful Videos:
 
