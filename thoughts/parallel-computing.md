@@ -22,3 +22,9 @@ Common questions on parallel computing / concurrency:
     * communication between processes are more complicated and are less efficient
     * smaller set of supporting libraries (and are generally not portable across different platform)
   
+  TL;DR 
+  * Generally if you need to maintain synchronized state then prefer threads. 
+  * Do you have large dataset? Then prefer threads. 
+  * Do you want easier development / debugging + finer-grain control? prefer processes
+  * Do you want to be able to scale into the cloud? prefer processes
+
