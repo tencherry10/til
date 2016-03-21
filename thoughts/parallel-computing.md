@@ -26,5 +26,5 @@ Common questions on parallel computing / concurrency:
   * Generally if you need to maintain synchronized state then prefer threads. 
   * Do you have large dataset? Then prefer threads. 
   * Do you want easier development / debugging + finer-grain control? prefer processes
-  * Do you want to be able to scale into the cloud? prefer processes
+  * Do you want to be able to scale into multiple machine or the cloud? prefer processes
 
