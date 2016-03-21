@@ -76,6 +76,7 @@
 ### Tools
 
 - [Scraping](tools/scraping.md)
+- [Useful Webapps](tools/useful-webapps.md)
 
 ### Verilog
 
