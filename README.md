@@ -82,4 +82,6 @@
 ### Verilog
 
 - [Verilog Mode Tips & Tricks](verilog/verilog-mode-tips.md)
+- [Great Verilog Papers](verilog/papers.md)
+
 
