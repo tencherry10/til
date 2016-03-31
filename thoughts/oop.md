@@ -1,6 +1,7 @@
 ### OOP
 
 1. [What is OOP?](#what-is-oop)
+1. [OOP is orthogonal to Encapsulation / Inheritance / Polymorphism](#oop-is-orthogonal-to-encapsulation-Inheritance-Polymorphism)
 
 ---
 
@@ -27,9 +28,9 @@ The distinctive features of Object-Oriented Programming are:
 
 1. Polymorphism - Provides a mechanism for selecting a proper procedural method call via Dynamic Dispatch specifically on the type of the object.
 
-### Thoughts
+#### OOP is orthogonal to Encapsulation / Inheritance / Polymorphism
 
-Immediately, the first things to recognize is OOP does not provide Encapsulation / Inheritance / Polymorphism. In reality, the relationship is opposite, you must have Encapsulation / Inheritance / Polymorphism before you can have OOP. So, you can have Encapsulation, Inheritance, and even Polymorphism in pieces (or all) without having OOP.
+Perhaps the most important point to realize is taht OOP does not provide Encapsulation / Inheritance / Polymorphism. In reality, the relationship is opposite, you must have Encapsulation / Inheritance / Polymorphism before you can have OOP. So, you can have Encapsulation, Inheritance, and even Polymorphism in pieces (or all) without having OOP.
 
 Case in point, let's look at C examples of how we can implement some or portions of OOP. C is chosen here b/c it is the prime example of a programming language that doesn't implement OOP intrinsically.
 
