@@ -43,6 +43,15 @@ Case in point, let's look at C examples of how we can implement some or portions
  
 #### Duck Typing and OOP
 
+As an aside, OOP can be "emulated" and portions of its feature can be "compromised". 
+
+For e.g., in python, it is possible to just polymorphically substitute an object with another object that is unrelated in terms of inheritance but have a similar method signature. 
+
+This notion of duck-typing means that an object is substitute-able with another object provided its API is the same (if it quacks like a "Duck"). This is great for dynamic languages and reduces the burden / ceremony of OOP, but may not be possible for static languages which demands compile time binding. 
+
+There is also a question of performance b/c this means the compiler / interpreter can not optimize across polymorphic late-binding boundary. Although, technically a JIT could work around this issue.
+
+
 
 
 
