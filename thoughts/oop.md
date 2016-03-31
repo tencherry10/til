@@ -1,7 +1,8 @@
-### OOP
+### Thoughts on OOP
 
 1. [What is OOP?](#what-is-oop)
-1. [OOP is orthogonal to Encapsulation / Inheritance / Polymorphism](#oop-is-orthogonal-to-encapsulation-Inheritance-Polymorphism)
+1. [OOP and Encapsulation / Inheritance / Polymorphism](#oop-is-orthogonal-to-encapsulation--inheritance--polymorphism)
+
 
 ---
 
@@ -37,7 +38,7 @@ Case in point, let's look at C examples of how we can implement some or portions
 1. Look at the implementation of FILE inside the libc library. It implements **Polymorphism** / **Encapsulation** functionality (ability to read/write from/to file streams) without Inheritance in C. It does it using a virtual dispatch jump table.
 1. Using opaque structs and a collection of public classes in C, one can easily **Encapsulate** the details from the client. For an interesting example of this, take a look at lua's code at lua_State.
 1. Take a look at gnome's [GObject](https://developer.gnome.org/gobject/stable/). It impements the whole OOP lifecycle with all of **Polymorphism** / **Inheritance** / **Encapsulation**.
-
+1. You can also just get **Inheritance** using just C struct sharing. You can also use ```-fms-extensions``` and annonymous structs to make this even more seamless.
 
 
 
