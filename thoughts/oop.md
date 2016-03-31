@@ -49,6 +49,8 @@ For e.g., in python, it is possible to just polymorphically substitute an object
 
 This notion of duck-typing means that an object is substitute-able with another object provided its API is the same (if it quacks like a "Duck"). This is great for dynamic languages and reduces the burden / ceremony of OOP, but may not be possible for static languages which demands compile time binding. 
 
+BTW, this duck-typing does NOT require that all API/method is implemented. Only the API/method used is necessary as there are no enforcement from the compiler/interpreter during duck-typing. (an exception is simply thrown when an unimplemented function are called).
+
 There is also a question of performance b/c this means the compiler / interpreter can not optimize across polymorphic late-binding boundary. Although, technically a JIT could work around this issue.
 
 
