@@ -27,9 +27,9 @@ Immediately, the first things to recognize is OOP does not provide Encapsulation
 
 Case in point, let's look at C examples of how we can implement some or portions of OOP. C is chosen here b/c it is the prime example of a programming language that doesn't implement OOP intrinsically.
 
-1. [Polymorphism / Encapsulation] Look at the implementation of FILE inside the libc library. It implements Polymorphism / Encapsulation functionality (ability to read/write from/to file streams) without Inheritance in C. It does it using a virtual dispatch jump table.
-1. [Encapsulation] Using opaque structs and a collection of public classes in C, one can easily Encapsulate the details from the client. For an interesting example of this, take a look at lua's code at lua_State.
-1. [Polymorphism / Inheritance / Encapsulation] - Take a look at gnome's [GObject](https://developer.gnome.org/gobject/stable/). It impements the whole OOP lifecycle with all of Polymorphism / Inheritance / Encapsulation.
+1. Look at the implementation of FILE inside the libc library. It implements **Polymorphism** / **Encapsulation** functionality (ability to read/write from/to file streams) without Inheritance in C. It does it using a virtual dispatch jump table.
+1. Using opaque structs and a collection of public classes in C, one can easily **Encapsulate** the details from the client. For an interesting example of this, take a look at lua's code at lua_State.
+1. Take a look at gnome's [GObject](https://developer.gnome.org/gobject/stable/). It impements the whole OOP lifecycle with all of **Polymorphism** / **Inheritance** / **Encapsulation**.
 
 
 
