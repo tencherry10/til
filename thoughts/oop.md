@@ -2,7 +2,7 @@
 
 1. [What is OOP?](#what-is-oop)
 1. [OOP and Encapsulation / Inheritance / Polymorphism](#oop-is-orthogonal-to-encapsulation--inheritance--polymorphism)
-
+1. [Duck Typing and OOP](#duck-typing-and-oop)
 
 ---
 
@@ -31,7 +31,7 @@ The distinctive features of Object-Oriented Programming are:
 
 #### OOP is orthogonal to Encapsulation / Inheritance / Polymorphism
 
-Perhaps the most important point to realize is taht OOP does not provide Encapsulation / Inheritance / Polymorphism. In reality, the relationship is opposite, you must have Encapsulation / Inheritance / Polymorphism before you can have OOP. So, you can have Encapsulation, Inheritance, and even Polymorphism in pieces (or all) without having OOP.
+Perhaps the most important point to realize is that OOP does not provide Encapsulation / Inheritance / Polymorphism. In reality, the relationship is opposite, you must have Encapsulation / Inheritance / Polymorphism before you can have OOP. So, you can have Encapsulation, Inheritance, and even Polymorphism in pieces (or all) without having OOP.
 
 Case in point, let's look at C examples of how we can implement some or portions of OOP. C is chosen here b/c it is the prime example of a programming language that doesn't implement OOP intrinsically.
 
@@ -39,8 +39,10 @@ Case in point, let's look at C examples of how we can implement some or portions
 1. Using opaque structs and a collection of public classes in C, one can easily **Encapsulate** the details from the client. For an interesting example of this, take a look at lua's code at lua_State.
 1. You can also just get **Inheritance** using just C struct sharing. You can also use ```-fms-extensions``` and annonymous structs to make this even more seamless.
 1. Take a look at gnome's [GObject](https://developer.gnome.org/gobject/stable/). It impements the whole OOP lifecycle with all of **Polymorphism** / **Inheritance** / **Encapsulation**.
-1. IF GObject is too heavy for you, you can also roll **Polymorphism** / **Encapsulation** class system on your own using a combination of virtual dispatch jump table with opaque structs. For an example, see this [sample code](https://github.com/tencherry10/learn/tree/master/c_vtable). You can easily extend this with C structural sharing in order to get **Inheritance**
+1. IF GObject is too heavy for you, you can also roll **Polymorphism** / **Encapsulation** class system on your own using a combination of virtual dispatch jump table with opaque structs. For an example, see this [sample code](https://github.com/tencherry10/learn/tree/master/c_vtable). You can easily extend this with C structural sharing in order to get **Inheritance**.
  
+#### Duck Typing and OOP
+
 
 
 
