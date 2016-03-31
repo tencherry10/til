@@ -1,5 +1,11 @@
 ### OOP
 
+1. [What is OOP?](#what-is-oop)
+
+---
+
+#### What is OOP?
+
 The distinctive features of Object-Oriented Programming are:
 
 1. Encapsulation - Hiding state / details behind the Object's API (or methods). 
