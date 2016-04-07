@@ -12,6 +12,7 @@
 * [Docker](#docker)
 * [Electronics](#electronics)
 * [Git](#git)
+* [Linux](#linux)
 * [Lua](#lua)
 * [Misc](#misc) 
 * [Python](#python)
@@ -53,6 +54,10 @@
 - [Caching Credentials](git/caching-credentials.md)
 - [Disable Password Popup](git/disable-password-popup.md)
 - [Merging Upstreaming Repo into a fork](git/merging-upstream-repo.md)
+
+### Linux
+
+- [Enabling Coredump](linux/enable-coredump.md)
 
 ### Lua
 
